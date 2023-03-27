@@ -58,13 +58,13 @@ export default function MediaCard() {
     fetchit(query);  
   }, []);
 
-  return ([
+  return (
 
 
 
-    <Grid container spacing={2}>,
+    <Grid container spacing={2}>
  
-    <input type="text" onChange={handleChange} value={queryString}/>, 
+    <input type="text" onChange={handleChange} value={queryString}/>
     apiData &&
     apiData?.data.map((item: { url: string | undefined; title: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; id: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; }) => (
       <Grid xs={8}>
@@ -84,9 +84,9 @@ export default function MediaCard() {
         </CardActions>
       </Card>
       </Grid>
-    )),
+    ))
     </Grid>
-  ]
+  
   );
 
   // <Card sx={{ maxWidth: 345 }}>
